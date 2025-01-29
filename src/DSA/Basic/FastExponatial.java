@@ -17,5 +17,6 @@ public class FastExponatial {
 
     public static void main(String[] args) {
         System.out.println(pow(2,10));
+        System.out.println("Hello");
     }
 }
