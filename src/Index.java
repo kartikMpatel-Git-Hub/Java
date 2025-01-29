@@ -16,6 +16,7 @@ public class Index {
         System.out.println("Prime !!");
         System.out.println("Hello");
         System.out.println("Hello");
+        System.out.println("test3");
         return;
     }
 }
