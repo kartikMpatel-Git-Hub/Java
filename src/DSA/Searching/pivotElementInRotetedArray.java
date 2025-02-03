@@ -1,4 +1,4 @@
-// This Code Is For Find Pivot In Dupliacte Roteted Array
+package DSA.Searching;// This Code Is For Find Pivot In Dupliacte Roteted Array
 
 public class pivotElementInRotetedArray{
     public static int findPivot(int[] nums){
@@ -53,5 +53,10 @@ public class pivotElementInRotetedArray{
         }
 
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int ar[] = {4,5,6,6,6,1,2,2,3};
+        System.out.println(findPivot(ar));
     }
 }

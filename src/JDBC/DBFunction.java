@@ -1,4 +1,4 @@
-package MyPack;
+package JDBC;
 
 import java.sql.*;
 
