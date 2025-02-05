@@ -37,4 +37,4 @@ Exploring Advanced Java Topics like Servlets, JSP, and Spring Boot.
 <h3>📬 Contact</h3><br>
 Kartik Patel<br>
 Aspiring Software Engineer | MCA @Dharmsinh Desai University<br>
-mail : kartikpatel7892@gmaul.com<br>
+Email : kartikpatel7892@gmaul.com<br>
