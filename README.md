@@ -14,9 +14,17 @@ Exploring Advanced Java Topics like Servlets, JSP, and Spring Boot.
 <h3>
 📝 Goals
 </h3><br>
-Strengthen problem-solving skills with DSA.
-Gain in-depth knowledge of Java fundamentals.
-Build real-world projects using advanced Java technologies.
+<ul>
+  <li>
+    Strengthen problem-solving skills with DSA.
+  </li>
+  <li>
+    Gain in-depth knowledge of Java fundamentals.
+  </li>
+  <li>
+    Build real-world projects using advanced Java technologies.
+  </li>
+</ul>
 <br>
 <h3>📬 Contact</h3><br>
 Kartik Patel<br>
