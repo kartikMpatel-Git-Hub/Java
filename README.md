@@ -7,9 +7,17 @@ Welcome to my Java DSA Repository, where I document my learning journey and prog
 <u>
 This repository is dedicated to:
 </u><br>
+<ul>
+  <li>
 Tracking my progress in mastering DSA concepts using Java.
+  </li>
+  <li>
 Practicing and improving my skills in Java Basics (OOP, Exception Handling, Collections, etc.).
+  </li>
+  <li>
 Exploring Advanced Java Topics like Servlets, JSP, and Spring Boot.
+  </li>
+</ul>
 <br>
 <h3>
 📝 Goals
