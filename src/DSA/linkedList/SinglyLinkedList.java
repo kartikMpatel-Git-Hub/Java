@@ -3,8 +3,8 @@ package DSA.linkedList;
 public class SinglyLinkedList {
 
     class Node{
-        private int data;
-        private Node next;
+        public int data;
+        public Node next;
 
 
         public Node(int data) {
@@ -16,8 +16,8 @@ public class SinglyLinkedList {
             this.next = next;
         }
     }
-    private Node head = null;
-    private Node tail = null;
+    protected Node head = null;
+    protected Node tail = null;
 
     public void insertFirst(int data){
         Node newNode = new Node(data);
@@ -124,7 +124,6 @@ public class SinglyLinkedList {
         }
         System.out.print("]");
     }
-
     private int size = 0;
     public static void main(String[] args) {
         SinglyLinkedList ll = new SinglyLinkedList();
