@@ -1,9 +1,6 @@
 package DSA.linkedList;
 
-import javax.swing.*;
-
-public class SinglyLinkedList {
-
+public class MergeTwoLinkedList {
     class Node{
         public int data;
         public Node next;
@@ -18,9 +15,12 @@ public class SinglyLinkedList {
             this.next = next;
         }
     }
-    protected Node head = null;
-    protected Node tail = null;
-
+    Node head;
+    Node tail;
+    MergeTwoLinkedList(){
+        head = null;
+        tail = null;
+    }
     public void insertFirst(int data){
         Node newNode = new Node(data);
         newNode.next = head;
@@ -139,36 +139,56 @@ public class SinglyLinkedList {
         }
         System.out.print("]");
     }
-    public Node insertAtidx(int idx,Node head,int data){
-        if(head == null)
-            return null;
-        if(idx == 0){
-            Node temp = new Node(data);
-            temp.next = head;
-            head = temp;
-            return head;
+    public static Node mergerSort(Node list1,Node list2){
+        MergeTwoLinkedList temp = new MergeTwoLinkedList();
+        while (list1 != null && list2 != null){
+            if(list1.data < list2.data){
+                temp.insertNode(list1.data);
+                list1 = list1.next;
+            }
+            else{
+                temp.insertNode(list2.data);
+                list2 = list2.next;
+            }
+        }
+        while (list1 != null){
+            temp.insertNode(list1.data);
+            list1 = list1.next;
+        }
+        while (list2 != null){
+            temp.insertNode(list2.data);
+            list2 = list2.next;
+        }
+        return temp.head;
+    }
+
+    public static Node midNode(Node head){
+        Node slowNode = head;
+        Node fastNode = head;
+        while (fastNode != null && fastNode.next != null){
+            slowNode = slowNode.next;
+            fastNode = fastNode.next.next;
         }
 
-        head.next = insertAtidx(idx-1,head.next,data);
-        return head;
+        return slowNode;
     }
     private int size = 0;
     public static void main(String[] args) {
-        SinglyLinkedList ll = new SinglyLinkedList();
-        ll.insertNode(1);
-        ll.insertNode(2);
-        ll.insertNode(3);
-        ll.insertNode(4);
-        ll.head = ll.insertAtidx(0,ll.head,12);
-//        ll.insertNode(5);
-//        System.out.println(ll.isContains(1));
-//        ll.display();
-//        ll.deleteFirst();
-//        ll.display();
-//        ll.deleteLast();
-//        ll.display();
-//        ll.deleteIndex(3);
-        ll.display();
-//        System.out.println(ll.getNode(2).data);
+        MergeTwoLinkedList ll1 = new MergeTwoLinkedList();
+        MergeTwoLinkedList ll2 = new MergeTwoLinkedList();
+        ll1.insertNode(1);
+        ll1.insertNode(3);
+        ll1.insertNode(5);
+        ll2.insertNode(2);
+        ll2.insertNode(4);
+        ll2.insertNode(5);
+        ll1.display();
+        ll2.display();
+
+        MergeTwoLinkedList sorted = new MergeTwoLinkedList();
+        sorted.head= mergerSort(ll1.head, ll2.head);
+        sorted.display();
+        Node midNode = midNode(sorted.head);
+        display(midNode);
     }
 }
