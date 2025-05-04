@@ -24,7 +24,6 @@ public class Index {
         }
         return count;
     }
-
     public static int countArrays(int[] original, int[][] bounds) {
         int n = original.length;
         int[] range = new int[n];
